@@ -1,7 +1,13 @@
 :root {
+    --cor-body: rgb(8, 13, 31);
     --cor-primaria: rgb(0, 0, 48);
     --cor-segundaria: rgb(0, 217, 255);
+    --cor-button-azul: rgb(82, 82, 224);
+    --cor-button-azul-hover: rgb(86, 81, 146);
+    --cor-gradient:linear-gradient(45deg, rgb(0, 217, 255), rgb(192, 1, 250));
     --cor-texto: #fff;
+    --cor-texto-cinza: #a7a7a7;
+    --cor-texto-roxo: rgb(148, 66, 254);
 }
 
 * {
@@ -13,9 +19,12 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: var(--cor-segundaria);
+    background-color: var(--cor-body);
     color: var(--cor-texto);
+    overflow-x: hidden;
 }
+
+/* Navbar */
 
 header {
     display: flex;
@@ -24,7 +33,11 @@ header {
     padding: 0 20px;
     background-color: var(--cor-primaria);
     width: 100vw;
-    height: 60px;
+    height: 60px;   
+}
+
+#home {
+    padding-top: 80px; 
 }
 
 .name {
@@ -102,3 +115,312 @@ nav a::after {
 nav a:hover::after {
     width: 100%;
 }
+
+
+/* Home */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.right, .left {
+    flex: 1;
+}
+
+.right {
+  position: relative;
+  top: -100px;
+  left: 150px;
+}
+
+.right .apresentacao img {
+    width: 50px;
+    justify-content: center;
+}
+
+@keyframes wave {
+    0%   { transform: rotate(0deg); }
+    15%  { transform: rotate(15deg); }
+    30%  { transform: rotate(-10deg); }
+    45%  { transform: rotate(15deg); }
+    60%  { transform: rotate(-5deg); }
+    75%  { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.waving {
+    animation: wave 1.5s ease-in-out;
+    transform-origin: bottom center;
+}
+
+.right .apresentacao {
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.right .apresentacao p{
+    font-size: 40px;
+}
+
+.right h1 {
+    font-size: 55px;
+    color: var(--cor-texto-roxo);
+    margin-bottom: 10px;
+}
+
+.right h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.typing {
+  font-size: 48px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #9642fe; 
+  width: 0;
+  animation: typing 4s steps(22) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 22ch } 
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+  100% { border-color: #9642fe; }
+}
+
+.btn button {
+    font-size: 30px;
+    padding: 20px;
+    color: var(--cor-texto);
+    background: var(--cor-body);
+    border: 4px solid;
+    border-image-slice: 1;
+    border-image-source: var(--cor-gradient);
+    cursor: pointer;
+}
+
+.btn button:hover {
+    background: var(--cor-gradient);
+}
+
+.left {
+    text-align: right;
+}
+
+.left img {
+  animation: flutuar 4s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(15px, -10px);
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+}
+
+
+/* SOBRE */
+.sobre {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.055); 
+    width: 80vw;
+    margin: auto;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    position: relative; 
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+
+.sobre-left, .sobre-right {
+    flex: 1;
+}
+
+.sobre-left img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    position: relative;
+    left: 60px;
+}
+
+.sobre-right h2 {
+    font-size: 35px;
+    color: var(--cor-segundaria);
+    margin-bottom: 20px;
+}
+
+.sobre-right .p-sobre {
+    font-size: 25px;
+    color: var(--cor-texto);
+}
+
+.sobre-right .p-git {
+    font-size: 25px;
+    color: var(--cor-texto-cinza);
+    margin: 20px 0;
+}
+
+.p-git a {
+    font-size: 20px;
+    color: inherit;
+    text-decoration: underline;
+}
+
+.p-git a:hover {
+    color: var(--cor-segundaria);
+}
+
+.btn-contato {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-right: 20px;
+}
+
+.btn-contato button {
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 20px;
+    color: var(--cor-texto);
+    background: var(--cor-button-azul);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-contato button:hover {
+    background: var(--cor-button-azul-hover);
+}
+
+.habilidades {
+    margin-top: 50px;
+}
+
+
+/* Habilidades */
+.habilidades h2 {
+    text-align: center;
+    font-size: 50px;
+    color: var(--cor-segundaria);
+    font-weight: bolder;
+}
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
+    padding: 20px;
+    width: 60vw;
+    margin: auto;
+}
+
+.card-linguagem {
+    background-color: var(--cor-body);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    color: #f0f0f0; 
+    flex: 1 1 calc(33.333% - 30px); 
+    min-width: 100px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative; 
+    overflow: hidden; 
+}
+
+
+.card-linguagem:hover {
+    transform: translateY(-10px) scale(1.02); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+
+.card-linguagem img {
+    max-width: 80px; 
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3)); 
+}
+
+.card-linguagem h4 {
+    font-size: 1.4em;
+    margin: 0;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+.card-linguagem::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: transparent; 
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.card-linguagem.html::after {
+    background-color: #E44D26; 
+}
+
+.card-linguagem.css::after {
+    background-color: #264DE4;
+}
+
+.card-linguagem.javascript::after {
+    background-color: #F0DB4F; 
+}
+
+.card-linguagem.java::after {
+    background-color: #007396; 
+}
+
+.card-linguagem.ruby::after {
+    background-color: #CC342D; 
+}
+
+.card-linguagem.git::after {
+    background-color: #ac4d00; 
+}
+
+
+
+
+
+
+
+
+
