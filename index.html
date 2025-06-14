@@ -9,7 +9,18 @@
       
     </style>
 </head>
+
+<button id="scrollTopBtn" title="Voltar ao topo"><img src="assets/img/setacima.png" alt="seta para cima"></button>
+
 <body>
+
+    <!-- Footer lateral -->
+    <div class="social-sidebar">
+        <a href="https://github.com/KarlosHenryque" target="_blank"><img src="assets/img/github.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/karlos-henryque-b80742312/" target="_blank"><img src="assets/img/linkedin.png" alt="LinkedIn"></a>
+        <div class="line"></div>
+    </div>
+
     <!-- Navbar -->
     <header>
         <div class="name">
@@ -39,7 +50,7 @@
             <h1 class="typing" id="nome">Karlos Henryque Pereira</h1>
             <h2>Desenvolvedor junior</h2>
             <div class="btn">
-                <button>Conheça meu portfólio </button>
+                <button id="btn-portifolio">Conheça meu portfólio </button>
             </div>
         </div>
 
@@ -48,7 +59,7 @@
         </div>
     </section>
 
-
+    <!-- Sobre -->
     <section id="sobre" class="sobre">
         <div class="card">
             <div class="sobre-left">
@@ -68,7 +79,9 @@
         </div>
     </section>
 
+    <!-- Habilidade -->
     <section id="habilidades" class="habilidades">
+        
         <h2>Habilidades</h2>
 
         <div class="container-cards ">
@@ -99,7 +112,87 @@
         </div>
     </section>
 
+    <!-- Projetos -->
+    <section id="projetos" class="projetos">
+        <h1 class="titulo-pro">Projetos</h1>
 
+        <div class="projetos">
+
+            <div class="card-projetos">
+            <img src="assets/img/PontoEletronico.png" alt="Ponto Eletrônico">
+            <div class="conteudo">
+                <h1>Ponto Eletrônico</h1>
+                <p>O Ponto Eletrônico Web é um sistema simples e funcional, desenvolvido em uma semana para registrar e gerenciar o ponto de colaboradores. Utiliza PHP, HTML e CSS, com integração ao banco de dados MySQL via phpMyAdmin e ambiente WampServer. Permite cadastro de usuários com papéis de administrador ou colaborador, cada um com interface personalizada. Os dados são armazenados no banco, possibilitando a geração de relatórios de forma prática e eficiente.</p>   
+                <p class="git"><a target="_blank" href="https://github.com/KarlosHenryque/PontoEletronicoWeb">GITHUB</a></p>
+            </div>
+            </div>
+
+            <div class="card-projetos">
+            <img src="assets/img/hotel.png" alt="Hotel99">
+            <div class="conteudo">
+                <h1>Hotel 99</h1>
+                  <p>Interface desenvolvida com Bootstrap. Projeto totalmente voltado para o front-end. Este trabalho consiste na criação de uma interface moderna e responsiva para um site de hotel, utilizando exclusivamente tecnologias de front-end, com destaque para o framework Bootstrap.</p>
+                <p class="git"><a target="_blank" href="https://github.com/KarlosHenryque/HotelFake99">GITHUB</a></p>
+            </div>
+            </div>
+
+            <div class="card-projetos">
+            <img src="assets/img/Lista.png" alt="Lista">
+            <div class="conteudo">
+                <h1>Lista de Tarefas</h1>
+                <p>Sistema de Lista com React. Descrição Este é um projeto desenvolvido com React.js que permite criar, visualizar e gerenciar listas de tarefas de forma dinâmica e interativa. A aplicação foi construída com foco na experiência do usuário, utilizando os conceitos essenciais do React, como componentização, estados e eventos.</p>
+                <p class="git"><a target="_blank" href="https://github.com/KarlosHenryque/Sistema-de-Lista-com-React">GITHUB</a></p>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experiencias -->
+    <section id="experiencia" class="timeline">
+        <h1 class="titulo-ex">Experiências</h1>
+
+        <div class="timeline-container">
+
+            <div class="timeline-item left">
+            <div class="content">
+                <h1>Sante Sistemas</h1>
+                <h2>Desenvolvedor Web</h2>
+                <p>Atuação fullstack no desenvolvimento de interfaces intuitivas e responsivas, desde o planejamento até a implementação. Responsável pela criação e otimização de telas que proporcionam uma experiência de usuário fluida e agradável. Além disso, realizo a identificação, análise e correção de bugs, garantindo a estabilidade e a performance dos sistemas. Trabalho integrado com equipes multidisciplinares para alinhar as soluções técnicas às necessidades do negócio, sempre focando na qualidade e eficiência das entregas.</p>
+            </div>
+            </div>
+
+            <div class="timeline-item right">
+            <div class="content">
+                <h1>Ferroeste</h1>
+                <h2>Auxiliar de TI</h2>
+                <p>Responsável pela manutenção preventiva e corretiva de computadores e periféricos, atuando na identificação e solução de problemas técnicos. Gerenciamento e monitoramento do servidor, assegurando seu pleno funcionamento e a integridade dos dados. Realização de configurações de redes e internet, incluindo roteadores, switches e cabeamento estruturado. Emissão de relatórios técnicos e operacionais, auxiliando na análise de desempenho e apoio à tomada de decisões. Suporte aos usuários no uso de sistemas e equipamentos, garantindo maior eficiência e produtividade.</p> 
+            </div>
+            </div>
+
+            <div class="timeline-item left">
+            <div class="content">
+                <h1>Tecinco</h1>
+                <h2>Analista de suporte</h2>
+                <p>Atuei como Analista de Suporte N1, prestando suporte técnico remoto para resolução de incidentes, principalmente em notas fiscais eletrônicas. Realizava instalação e configuração de sistemas, suporte a periféricos e seguia os SLAs. Registrava atendimentos, escalonava chamados quando necessário e colaborava na atualização da base de conhecimento para melhorar o suporte.</p>    
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <h1>Contato</h1>
+        <p>Estou sempre aberto a novas oportunidades de trabalho ou colaborando em projetos incríveis. Basta preencher o formulário que retornarei.</p>
+
+        <form class="form-contato">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="mensagem" id="mensagem" placeholder="Mensagem" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 
     <script src="assets/js/index.js"></script>
 </body>

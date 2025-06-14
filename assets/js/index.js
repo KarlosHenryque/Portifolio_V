@@ -4,6 +4,9 @@ function inicializador(){
     nomeCascata();
     iniciarAnimacaoHand();
     nomeDigitando();
+    expandedP();
+    btnProjetos();
+    botaoTopo();
 }
 
 function nomeCascata() {
@@ -51,4 +54,37 @@ function nomeDigitando() {
         }
     }
     digitar();
+}
+
+function expandedP(){
+  document.querySelectorAll('.timeline-item .content').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('expanded');
+    })
+  })
+}
+
+function btnProjetos() {
+  document.getElementById('btn-portifolio').addEventListener('click', function () {
+    const destino = document.getElementById('projetos');
+    if (destino) {
+      destino.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+}
+
+function botaoTopo(){
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function () {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    };
+
+    scrollBtn.addEventListener("click", function () {
+        document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+    });
 }
