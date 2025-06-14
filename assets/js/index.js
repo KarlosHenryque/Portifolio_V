@@ -7,6 +7,7 @@ function inicializador(){
     expandedP();
     btnProjetos();
     botaoTopo();
+    menu();
 }
 
 function nomeCascata() {
@@ -88,3 +89,13 @@ function botaoTopo(){
         document.getElementById("home").scrollIntoView({ behavior: "smooth" });
     });
 }
+
+function menu(){
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("open");
+  });
+}
+

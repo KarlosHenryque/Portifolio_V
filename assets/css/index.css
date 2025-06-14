@@ -51,8 +51,30 @@ body {
         background-color: #0056b3;
     }
 
-/* Navbar */
 
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1001;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px;
+  background-color: var(--cor-texto); 
+  transition: all 0.3s ease;
+}
+
+/* Navbar */
 header {
     display: flex;
     align-items: center;
@@ -798,13 +820,177 @@ nav a:hover::after {
     transform: scale(1.2);
 }
 
+@media (max-width: 1024px) {
+  header {
+    position: static !important;
+  }
 
+  .home {
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+    text-align: center;
+  }
 
+  .left img {
+    width: 80%;
+    margin: 0 auto;
+  }
 
+  .right {
+    left: 0;
+    top: 0;
+  }
 
+  .right h1,
+  .right h2 {
+    font-size: 32px;
+  }
 
+  .typing {
+    font-size: 32px;
+  }
 
+  .container-cards {
+    width: 90vw;
+  }
 
+  .card-linguagem {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .card-projetos {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-projetos img {
+    width: 100%;
+  }
+
+  .timeline-container::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item.left {
+    left: 0;
+  }
+
+  .timeline-item .content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    position: static !important;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: var(--cor-primaria);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+
+  .menu.open {
+    height: 300px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    z-index: 100;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+  }
+
+  .sobre {
+    flex-direction: column;
+    padding: 20px;
+    width: 90vw;
+  }
+
+  .sobre-left img {
+    left: 0;
+    width: 100%;
+  }
+
+  .card {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .projetos {
+    padding: 0 10px;
+  }
+
+  .card-linguagem {
+    flex: 1 1 100%;
+  }
+
+  .btn button,
+  .btn-contato button {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .contato p,
+  .contato h1 {
+    font-size: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-icons {
+    gap: 10px;
+  }
+
+  .social-sidebar {
+    display: none;
+  }
+}
 
 
 
