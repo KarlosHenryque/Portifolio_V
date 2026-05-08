@@ -1,223 +1,335 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <title>Portfólio</title>
-    <style>
-      
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karlos Henryque — Dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
 </head>
-
-<button id="scrollTopBtn" title="Voltar ao topo"><img src="assets/img/setacima.png" alt="seta para cima"></button>
-
 <body>
 
-    <!-- Footer lateral -->
-    <div class="social-sidebar">
-        <a href="https://github.com/KarlosHenryque" target="_blank"><img src="assets/img/github.png" alt="GitHub"></a>
-        <a href="https://www.linkedin.com/in/karlos-henryque-b80742312/" target="_blank"><img src="assets/img/linkedin.png" alt="LinkedIn"></a>
-        <div class="line"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="social-sidebar">
+    <a href="https://github.com/KarlosHenryque" target="_blank" aria-label="GitHub">
+      <img src="assets/img/github.png" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/karlos-henryque-b80742312/" target="_blank" aria-label="LinkedIn">
+      <img src="assets/img/linkedin.png" alt="LinkedIn">
+    </a>
+    <div class="line"></div>
+  </div>
+
+  <button id="scrollTopBtn" title="Voltar ao topo" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <header id="header">
+    <a href="#home" class="name">
+      <span>Karlos <span>Henryque</span></span>
+    </a>
+
+    <nav id="desktop-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#habilidades">Skills</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Fechar menu">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav>
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#sobre" class="mobile-link">Sobre</a>
+      <a href="#habilidades" class="mobile-link">Skills</a>
+      <a href="#projetos" class="mobile-link">Projetos</a>
+      <a href="#experiencia" class="mobile-link">Experiência</a>
+      <a href="#contato" class="mobile-link">Contato</a>
+    </nav>
+    <div class="mobile-nav-divider"></div>
+    <div class="mobile-nav-socials">
+      <a href="https://github.com/KarlosHenryque" target="_blank" aria-label="GitHub">
+        <img src="assets/img/github.png" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/karlos-henryque-b80742312/" target="_blank" aria-label="LinkedIn">
+        <img src="assets/img/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+  </div>
+
+  <section id="home">
+    <div class="home-inner">
+      <div class="home-text fade-in">
+        <div class="greeting">
+          <span class="wave">👋</span> Olá, seja bem-vindo
+        </div>
+        <h1 class="home-name">
+          Karlos<br><span class="highlight">Henryque</span><br>Pereira
+        </h1>
+        <p class="home-role">Desenvolvedor <span>Junior</span> — Java · JavaScript · Web</p>
+        <div class="home-cta">
+          <button class="btn-primary" id="btn-portifolio">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="#fff" fill="none" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+            Ver Projetos
+          </button>
+          <a href="#contato" class="btn-secondary">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Contato
+          </a>
+        </div>
+      </div>
+
+      <div class="home-visual fade-in" style="transition-delay:.2s">
+        <div class="hero-card">
+          <img src="assets/img/PersonaDev.png" alt="Persona Dev">
+          <div class="hero-card-footer">
+            <div class="status-dot"></div>
+            <div class="status-text"><strong>Disponível</strong> para novas oportunidades</div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Navbar -->
-    <header>
-        <div class="name">
-            <img src="assets/img/notebook.png" alt="notebook" />
-            <h1 id="animated-name">Karlos Henryque</h1>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="sobre-inner">
+      <div class="sobre-img-wrap fade-in">
+        <img src="assets/img/notsobre.jpg" alt="Sobre mim">
+      </div>
+      <div class="sobre-text fade-in" style="transition-delay:.15s">
+        <div class="section-tag">Sobre mim</div>
+        <h2 class="section-title">Desenvolvendo o futuro,<br>uma linha por vez</h2>
+        <p>Sou um desenvolvedor júnior com paixão por programação, especialmente em <strong>Java</strong> e <strong>JavaScript</strong>. Atualmente curso Engenharia de Software e busco me aprofundar cada vez mais na área.</p>
+        <p>Acredito na importância de aprender continuamente e compartilhar conhecimento com outros desenvolvedores. Cada projeto é uma oportunidade de crescer.</p>
+        <p>Este portfólio foi desenvolvido por mim e está disponível no <a href="https://github.com/KarlosHenryque/Portifolio_V" target="_blank" class="link-inline">GitHub</a>.</p>
+        <div>
+          <a href="#contato" class="btn-primary" style="width:fit-content">Entre em Contato</a>
         </div>
-        
-        <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <div class="habilidades-inner">
+      <div class="fade-in">
+        <div class="section-tag">Tecnologias</div>
+        <h2 class="section-title">Habilidades</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card fade-in" data-accent="html" style="transition-delay:.05s">
+          <img src="assets/img/html.png" alt="HTML">
+          <h4>HTML</h4>
         </div>
-
-        <div class="menu" id="menu">
-            <nav>
-                <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#experiencia">Experiências</a></li>
-                <li><a href="#contato">Contatos</a></li>
-                </ul>
-            </nav>
+        <div class="skill-card fade-in" data-accent="css" style="transition-delay:.1s">
+          <img src="assets/img/css.png" alt="CSS">
+          <h4>CSS</h4>
         </div>
-    </header>
-
-    <!-- Home -->
-    <section id="home" class="home">
-        <div class="right">
-            <div class="apresentacao">
-                <img src="assets/img/hand.png" alt="mao acenando" id="hand">
-                <p>Olá, o meu nome é</p>
-            </div>
-
-            <h1 class="typing" id="nome">Karlos Henryque Pereira</h1>
-            <h2>Desenvolvedor junior</h2>
-            <div class="btn">
-                <button id="btn-portifolio">Conheça meu portfólio </button>
-            </div>
+        <div class="skill-card fade-in" data-accent="js" style="transition-delay:.15s">
+          <img src="assets/img/javascript.png" alt="JavaScript">
+          <h4>JavaScript</h4>
         </div>
-
-        <div class="left">
-            <img src="assets/img/PersonaDev.png" alt="Persona Desenvolvedor">
+        <div class="skill-card fade-in" data-accent="java" style="transition-delay:.2s">
+          <img src="assets/img/java.png" alt="Java">
+          <h4>Java</h4>
         </div>
-    </section>
-
-    <!-- Sobre -->
-    <section id="sobre" class="sobre">
-        <div class="card">
-            <div class="sobre-left">
-                <img src="assets/img/notsobre.jpg" alt="notebook">
-            </div>
-
-           <div class="sobre-right">
-            <h2>Deixe-me apresentar</h2> 
-           <p class="p-sobre">Sou um desenvolvedor júnior com paixão por programação, especialmente nas linguagens Java e JavaScript. Atualmente, estou cursando Engenharia de Software e busco me aprofundar cada vez mais na área, sempre em busca de novos conhecimentos. Acredito na importância de aprender continuamente e compartilhar o que aprendo com outros desenvolvedores.</p>
-           <p class="p-git">Este portfólio foi desenvolvido por mim e está disponível no <a target="_blank" href="https://github.com/KarlosHenryque/Portifolio-V2">GITHUB</a></p>
-
-            <div class="btn-contato">
-                <button>Entre em Contato </button>
-            </div>
-
-           </div>
+        <div class="skill-card fade-in" data-accent="ruby" style="transition-delay:.25s">
+          <img src="assets/img/python.png" alt="Ruby on Rails">
+          <h4>Python</h4>
         </div>
-    </section>
-
-    <!-- Habilidade -->
-    <section id="habilidades" class="habilidades">
-        
-        <h2>Habilidades</h2>
-
-        <div class="container-cards ">
-            <div class="card-linguagem html">
-            <img src="assets/img/html.png" alt="html">
-            <h4>HTML</h4>
-            </div>
-            <div class="card-linguagem css">
-                <img src="assets/img/css.png" alt="html">
-                <h4>Css</h4>
-            </div>
-            <div class="card-linguagem javascript">
-                <img src="assets/img/javascript.png" alt="html">
-                <h4>Javascript</h4>
-            </div>
-            <div class="card-linguagem java">
-                <img src="assets/img/java.png" alt="html">
-                <h4>Java</h4>
-            </div>
-            <div class="card-linguagem ruby">
-                <img src="assets/img/Ruby.png" alt="html">
-                <h4>Ruby on rails</h4>
-            </div>
-            <div class="card-linguagem git">
-                <img src="assets/img/git.png" alt="html">
-                <h4>Git</h4>
-            </div>
+        <div class="skill-card fade-in" data-accent="git" style="transition-delay:.3s">
+          <img src="assets/img/git.png" alt="Git">
+          <h4>Git</h4>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projetos -->
-    <section id="projetos" class="projetos">
-        <h1 class="titulo-pro">Projetos</h1>
+  <section id="projetos">
+    <div class="projetos-inner">
+      <div class="fade-in">
+        <div class="section-tag">Trabalhos</div>
+        <h2 class="section-title">Projetos</h2>
+      </div>
+      <div class="projects-grid">
 
-        <div class="projetos">
-
-            <div class="card-projetos">
+        <div class="project-card fade-in" style="transition-delay:.1s">
+          <div class="project-img">
             <img src="assets/img/WolfGo.png" alt="WolfGo">
-            <div class="conteudo">
-                <h1>WolfGo</h1>
-                <p>Sistema desenvolvido com React no frontend e Node.js no backend, utilizando banco de dados PostgreSQL. A plataforma é voltada para auxiliar pessoas que estão iniciando na academia, oferecendo geração personalizada de treinos e dietas. Para isso, conta com um agente de inteligência artificial integrado via n8n, permitindo a criação de planos específicos de acordo com o perfil e os objetivos de cada usuário.</p>
-                <p class="git"><a target="_blank" href="https://github.com/KarlosHenryque/WolfGo">GITHUB</a></p>
-            </div>
-            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tag">React · Node.js · PostgreSQL · IA</div>
+            <h2>WolfGo</h2>
+            <p>Plataforma para iniciantes na academia com geração personalizada de treinos e dietas via agente de inteligência artificial integrado com n8n. Frontend em React, backend em Node.js e banco PostgreSQL.</p>
+            <a href="https://github.com/KarlosHenryque/WolfGo" target="_blank" class="project-link">
+              Ver no GitHub
+              <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
 
-            <div class="card-projetos">
+        <div class="project-card fade-in" style="transition-delay:.15s">
+          <div class="project-img">
             <img src="assets/img/PontoEletronico.png" alt="Ponto Eletrônico">
-            <div class="conteudo">
-                <h1>Ponto Eletrônico</h1>
-                <p>O Ponto Eletrônico Web é um sistema simples e funcional, desenvolvido em uma semana para registrar e gerenciar o ponto de colaboradores. Utiliza PHP, HTML e CSS, com integração ao banco de dados MySQL via phpMyAdmin e ambiente WampServer. Permite cadastro de usuários com papéis de administrador ou colaborador, cada um com interface personalizada. Os dados são armazenados no banco, possibilitando a geração de relatórios de forma prática e eficiente.</p>   
-                <p class="git"><a target="_blank" href="https://github.com/KarlosHenryque/PontoEletronicoWeb">GITHUB</a></p>
-            </div>
-            </div>
-
-            <div class="card-projetos">
-            <img src="assets/img/hotel.png" alt="Hotel99">
-            <div class="conteudo">
-                <h1>Hotel 99</h1>
-                  <p>Interface desenvolvida com Bootstrap. Projeto totalmente voltado para o front-end. Este trabalho consiste na criação de uma interface moderna e responsiva para um site de hotel, utilizando exclusivamente tecnologias de front-end, com destaque para o framework Bootstrap.</p>
-                <p class="git"><a target="_blank" href="https://github.com/KarlosHenryque/HotelFake99">GITHUB</a></p>
-            </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Experiencias -->
-    <section id="experiencia" class="timeline">
-        <h1 class="titulo-ex">Experiências</h1>
-
-        <div class="timeline-container">
-
-            <div class="timeline-item left">
-            <div class="content">
-                <h1>Linx</h1>
-                <h2>Analista de suporte</h2>
-                <p>Prestar suporte aos clientes na resolução de dúvidas relacionadas ao sistema, realizar ajustes pontuais em banco de dados, colaborar em projetos de automação com inteligência artificial, conduzir treinamentos básicos para clientes e colaboradores, além de documentar bugs, executar testes em novas versões do sistema.</p>
-            </div>
-            </div>
-
-
-            <div class="timeline-item right">
-            <div class="content">
-                <h1>Sante Sistemas</h1>
-                <h2>Desenvolvedor Web</h2>
-                <p>Atuação fullstack no desenvolvimento de interfaces intuitivas e responsivas, desde o planejamento até a implementação. Responsável pela criação e otimização de telas que proporcionam uma experiência de usuário fluida e agradável. Além disso, realizo a identificação, análise e correção de bugs, garantindo a estabilidade e a performance dos sistemas. Trabalho integrado com equipes multidisciplinares para alinhar as soluções técnicas às necessidades do negócio, sempre focando na qualidade e eficiência das entregas.</p>
-            </div>
-            </div>
-
-            <div class="timeline-item left">
-            <div class="content">
-                <h1>Tecinco</h1>
-                <h2>Analista de suporte</h2>
-                <p>Atuei como Analista de Suporte N1, prestando suporte técnico remoto para resolução de incidentes, principalmente em notas fiscais eletrônicas. Realizava instalação e configuração de sistemas, suporte a periféricos e seguia os SLAs. Registrava atendimentos, escalonava chamados quando necessário e colaborava na atualização da base de conhecimento para melhorar o suporte.</p>    
-            </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Contato -->
-    <section id="contato" class="contato">
-        <h1>Contato</h1>
-        <p>Estou sempre aberto a novas oportunidades de trabalho ou colaborando em projetos incríveis. Basta preencher o formulário que retornarei.</p>
-
-        <form class="form-contato">
-            <input type="text" name="nome" placeholder="Nome" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="mensagem" id="mensagem" placeholder="Mensagem" rows="5" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <p>Desenvolvido por <a href="https://github.com/KarlosHenryque" target="_blank">Karlos Henryque</a></p>
-            <div class="footer-icons">
-            <a href="https://github.com/KarlosHenryque" target="_blank">
-                <img src="assets/img/github.png" alt="GitHub">
+          </div>
+          <div class="project-body">
+            <div class="project-tag">PHP · MySQL · HTML/CSS</div>
+            <h2>Ponto Eletrônico</h2>
+            <p>Sistema web de registro e gestão de ponto de colaboradores. Desenvolvido em uma semana com PHP, MySQL e WampServer. Permite cadastro de usuários com papéis distintos e geração de relatórios.</p>
+            <a href="https://github.com/KarlosHenryque/PontoEletronicoWeb" target="_blank" class="project-link">
+              Ver no GitHub
+              <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
-            <a href="https://www.linkedin.com/in/karlos-henryque-b80742312/" target="_blank">
-                <img src="assets/img/linkedin.png" alt="LinkedIn">
-            </a>
-            </div>
+          </div>
         </div>
-    </footer>
 
-    <script src="assets/js/index.js"></script>
+        <div class="project-card fade-in" style="transition-delay:.2s">
+          <div class="project-img">
+            <img src="assets/img/hotel.png" alt="Hotel 99">
+          </div>
+          <div class="project-body">
+            <div class="project-tag">Bootstrap · Front-end</div>
+            <h2>Hotel 99</h2>
+            <p>Interface moderna e responsiva para um site de hotel, desenvolvida com foco total em front-end utilizando Bootstrap. Layout elegante com atenção especial à experiência do usuário.</p>
+            <a href="https://github.com/KarlosHenryque/HotelFake99" target="_blank" class="project-link">
+              Ver no GitHub
+              <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <div class="experiencia-inner">
+      <div class="fade-in">
+        <div class="section-tag">Carreira</div>
+        <h2 class="section-title">Experiências</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item fade-in" style="transition-delay:.15s">
+          <div class="timeline-dot">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="timeline-card" onclick="toggleTimeline(this)">
+            <div class="timeline-company">Tecinco</div>
+            <div class="timeline-role">Analista de Suporte N1</div>
+            <p class="timeline-desc">Suporte técnico remoto para incidentes, principalmente em notas fiscais eletrônicas. Instalação e configuração de sistemas, suporte a periféricos e seguimento de SLAs. Registro de atendimentos e atualização da base de conhecimento.</p>
+            <div class="timeline-toggle">
+              <span>Ler mais</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in" style="transition-delay:.1s">
+          <div class="timeline-dot">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="timeline-card" onclick="toggleTimeline(this)">
+            <div class="timeline-company">Sante Sistemas</div>
+            <div class="timeline-role">Desenvolvedor Web</div>
+            <p class="timeline-desc">Atuação fullstack no desenvolvimento de interfaces intuitivas e responsivas. Criação e otimização de telas com foco em UX fluida. Identificação, análise e correção de bugs. Integração com equipes multidisciplinares.</p>
+            <div class="timeline-toggle">
+              <span>Ler mais</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+        </div>
+
+         <div class="timeline-item fade-in" style="transition-delay:.05s">
+          <div class="timeline-dot">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="timeline-card" onclick="toggleTimeline(this)">
+            <div class="timeline-company">Linx</div>
+            <div class="timeline-role">Analista de Suporte</div>
+            <p class="timeline-desc">Prestava suporte aos clientes na resolução de dúvidas do sistema, realizava ajustes em banco de dados, colaborava em projetos de automação com IA, conduzia treinamentos básicos e documentava bugs e novas versões.</p>
+            <div class="timeline-toggle">
+              <span>Ler mais</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="contato-inner">
+      <div class="fade-in">
+        <div class="section-tag">Vamos conversar</div>
+        <h2 class="section-title">Contato</h2>
+        <p>Estou sempre aberto a novas oportunidades e colaborações. Preencha o formulário e retornarei em breve!</p>
+      </div>
+      <form class="form-contato fade-in" style="transition-delay:.1s" id="contact-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+          </div>
+          <div class="form-field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="6" placeholder="Olá, Karlos! Gostaria de..." required></textarea>
+        </div>
+        <button type="submit" class="btn-send">
+          Enviar Mensagem
+          <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>Desenvolvido por <a href="https://github.com/KarlosHenryque" target="_blank">Karlos Henryque</a> · 2026</p>
+    <div class="footer-icons">
+      <a href="https://github.com/KarlosHenryque" target="_blank" aria-label="GitHub">
+        <img src="assets/img/github.png" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/karlos-henryque-b80742312/" target="_blank" aria-label="LinkedIn">
+        <img src="assets/img/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+  </footer>
+
+  <script src="./assets/script.js"></script>
 </body>
 </html>
